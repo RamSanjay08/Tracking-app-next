@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-const raleway = Raleway({ subsets: ["latin"] });
+import { Inter } from "next/font/google";
+import '../style/globals.css'
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Tracking App",
@@ -16,8 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={raleway.className}>
-        <Header />
+      <body className={inter.className}>
         {children}
         </body>
     </html>
